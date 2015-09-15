@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <HealthKit/HKHealthStore.h>
+#import "RootViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic) HKHealthStore *healthStore;
+@property (nonatomic) RootViewController *viewC;
 
 @end
 
@@ -17,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.healthStore = [[HKHealthStore alloc] init];
+    [self setUpHealthStoreIfPossible];
     return YES;
 }
 
@@ -121,6 +128,14 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+    }
+}
+
+-(void)setUpHealthStoreIfPossible{
+    UINavigationController *navigationController = (UINavigationController*)[self.window rootViewController];
+    self.viewC = (RootViewController*)navigationController.topViewController;
+    if ([self.viewC respondsToSelector:@selector(setHealthStore:)]) {
+        [self.viewC setHealthStore:self.healthStore];
     }
 }
 

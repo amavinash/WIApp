@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@import HealthKit;
 
+@interface RootViewController : UIViewController
+
+@property (nonatomic) HKHealthStore *healthStore;
 
 @end
 
