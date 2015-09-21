@@ -54,11 +54,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOI-JD-Xq3">
+                                <rect key="frame" x="425" y="215" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="3e6-Iu-2Ve"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yx9-aC-adz"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addWaterConsumption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afA-gX-uSv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kj0-Lo-Cmg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Dd-Fo-Rih"/>
+                            <constraint firstItem="dOI-JD-Xq3" firstAttribute="leading" secondItem="ove-7d-L9J" secondAttribute="trailing" constant="104" id="5EL-E9-9kP"/>
                             <constraint firstAttribute="trailing" secondItem="Kj0-Lo-Cmg" secondAttribute="trailing" constant="194" id="7G7-6B-qBh"/>
+                            <constraint firstItem="dOI-JD-Xq3" firstAttribute="top" secondItem="ove-7d-L9J" secondAttribute="top" id="COi-2m-3v0"/>
                             <constraint firstItem="W3x-u6-nCw" firstAttribute="top" secondItem="ove-7d-L9J" secondAttribute="bottom" constant="213" id="Fuf-bo-PFG"/>
                             <constraint firstItem="Kj0-Lo-Cmg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="194" id="Kpj-ae-AqY"/>
                             <constraint firstItem="ove-7d-L9J" firstAttribute="top" secondItem="Kj0-Lo-Cmg" secondAttribute="bottom" constant="30" id="Kv9-TH-V2G"/>

@@ -13,6 +13,7 @@
 @interface RootViewController : UIViewController
 
 @property (nonatomic) HKHealthStore *healthStore;
+- (IBAction)addWaterConsumption:(id)sender;
 
 @end
 
